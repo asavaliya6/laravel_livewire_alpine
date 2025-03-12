@@ -8,6 +8,7 @@ use App\Livewire\LogoutComponent;
 use App\Livewire\Wizard;
 use Livewire\Volt\Volt;
 use App\Http\Controllers\LogoutController;
+use App\Livewire\VotingSystem;
 
 
 Route::view('/', 'welcome');
@@ -25,5 +26,6 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('/to-do-list', ToDoList::class)->middleware(['auth'])->name('to-do-list');
 Route::get('/user-search', UserSearch::class)->name('user-search');
 Route::get('/wizard-form', Wizard::class)->name('wizard-form');
+Route::get('/voting', VotingSystem::class)->name('voting');
 
 require __DIR__.'/auth.php';

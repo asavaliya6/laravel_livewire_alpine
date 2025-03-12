@@ -42,6 +42,9 @@ new class extends Component
                     <x-nav-link :href="route('wizard-form')" :active="request()->routeIs('wizard-form')">
                         {{ __('Wizard Form') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('voting')" :active="request()->routeIs('voting')">
+                        {{ __('Voting System') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -103,6 +106,9 @@ new class extends Component
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('wizard-form')" :active="request()->routeIs('wizard-form')" wire:navigate>
                 {{ __('Wizard Form') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('voting')" :active="request()->routeIs('voting')" wire:navigate>
+                {{ __('Voting System') }}
             </x-responsive-nav-link>
         </div>
 

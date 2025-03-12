@@ -33,3 +33,10 @@
 - Create Component `php artisan make:livewire wizard`
 - Update Livewire Component Logic --> app/Livewire/Wizard.php and Create Livewire View --> resources/views/livewire/wizard.blade.php and Add route and Create View --> resources/views/default.blade.php (In this file use @livewireStyles, @livewireScripts, and @livewire('wizard')) and --> add public/wizard.css file
 
+## Real-Time Voting system
+
+- Install Livewire `composer require livewire/livewire` and publish Livewire `php artisan livewire:publish`
+- Create Livewire Component `php artisan make:livewire VotingSystem`
+- Create Migration and Model `php artisan make:migration create_votings_table --create=votings` `php artisan migrate` `php artisan make:Model Voting`
+- Seed Data `php artisan make:seeder VotingSeeder` `php artisan db:seed --class=VotingSeeder`
+- Build Livewire Component --> app/Http/Livewire/VotingSystem.php and Add View --> resources/views/livewire/voting-system.blade.php and Add Route

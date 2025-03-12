@@ -17,6 +17,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
         <script src="//unpkg.com/alpinejs" defer></script>
+        <script>
+            document.addEventListener('alpine:init', () => {
+                Alpine.store('votes', {});
+                Livewire.on('vote-updated', () => {
+                    Livewire.emit('refresh');
+                });
+            });
+        </script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
