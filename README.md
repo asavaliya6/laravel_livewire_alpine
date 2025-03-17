@@ -46,3 +46,10 @@
 - Create Livewire Component `php artisan make:livewire Comments`
 - Create Migration and Model `php artisan make:migration create_comments_table` `php artisan make:migration create_replies_table` `php artisan migrate` `php artisan make:Model Comment` ``php artisan make:Model Reply`
 - Build Livewire Component --> app/Http/Livewire/Comments.php and Add View --> resources/views/livewire/comments.blade.php and Add Route
+
+## Upload profile image
+
+- Create Livewire Component `php artisan make:livewire UserProfile`
+- Create Profile Model and Migration `php artisan make:model Profile -m` `php artisan migrate` `php artisan migrate`
+- Build Livewire Component --> app/Http/Livewire/UserProfile.php and Add View --> resources/views/livewire/user-profile.blade.php and Add Route
+- Create Storage Link `php artisan storage:link`

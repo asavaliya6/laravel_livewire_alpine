@@ -10,6 +10,7 @@ use Livewire\Volt\Volt;
 use App\Http\Controllers\LogoutController;
 use App\Livewire\VotingSystem;
 use App\Livewire\Comments;
+use App\Livewire\UserProfile;
 
 
 Route::view('/', 'welcome');
@@ -29,5 +30,6 @@ Route::get('/user-search', UserSearch::class)->name('user-search');
 Route::get('/wizard-form', Wizard::class)->name('wizard-form');
 Route::get('/voting', VotingSystem::class)->name('voting');
 Route::get('/comments', Comments::class)->name('comments');
+Route::get('/profile', UserProfile::class)->name('profile');
 
 require __DIR__.'/auth.php';
