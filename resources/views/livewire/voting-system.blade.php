@@ -1,5 +1,5 @@
 <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold text-center mb-6">Voting System</h1>
+    <h1 class="text-3xl font-bold text-center text-white mb-6">Voting System</h1>
 
     <div 
         x-data="{ show: false, message: '' }"

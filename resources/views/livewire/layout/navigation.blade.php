@@ -45,6 +45,9 @@ new class extends Component
                     <x-nav-link :href="route('voting')" :active="request()->routeIs('voting')">
                         {{ __('Voting System') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('comments')" :active="request()->routeIs('comments')">
+                        {{ __('Comments') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -109,6 +112,9 @@ new class extends Component
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('voting')" :active="request()->routeIs('voting')" wire:navigate>
                 {{ __('Voting System') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('comments')" :active="request()->routeIs('comments')" wire:navigate>
+                {{ __('Comments') }}
             </x-responsive-nav-link>
         </div>
 
