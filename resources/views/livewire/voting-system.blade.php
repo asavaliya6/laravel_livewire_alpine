@@ -14,7 +14,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         @foreach($votings as $voting)
             <div class="bg-white shadow-md rounded-lg p-4 border">
-                <h2 class="font-bold text-lg">{{ $voting->candidate_name }}</h2>
+                <h2 class="font-bold text-lg text-black">{{ $voting->candidate_name }}</h2>
                 <p class="text-gray-600">Votes: {{ $voting->votes }}</p>
 
                 <button 

@@ -11,13 +11,19 @@ use App\Http\Controllers\LogoutController;
 use App\Livewire\VotingSystem;
 use App\Livewire\Comments;
 use App\Livewire\UserProfile;
+use App\Models\User;
+use App\Livewire\Chat;
 
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('dashboard', function(){
+    return view('dashboard',[
+        'users' => User::where('id','!=', auth()->id())->get(),
+    ]);
+})
+->middleware(['auth','verified'])
+->name('dashboard');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
@@ -31,5 +37,5 @@ Route::get('/wizard-form', Wizard::class)->name('wizard-form');
 Route::get('/voting', VotingSystem::class)->name('voting');
 Route::get('/comments', Comments::class)->name('comments');
 Route::get('/profile', UserProfile::class)->name('profile');
-
+Route::get('/chat/{user}',Chat::class)->name('chat');
 require __DIR__.'/auth.php';

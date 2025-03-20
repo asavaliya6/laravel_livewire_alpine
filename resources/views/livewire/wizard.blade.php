@@ -4,7 +4,7 @@
         <div class="bg-green-500 text-white p-3 rounded-md mb-4">{{ $successMessage }}</div>
     @endif
 
-    <div class="flex justify-between items-center border-b-2 pb-2 mb-4">
+    <div class="flex justify-between items-center border-b-2 pb-2 mb-4 text-black">
         <div @class(['font-bold text-blue-500' => $currentStep == 1])>Step 1</div>
         <div @class(['font-bold text-blue-500' => $currentStep == 2])>Step 2</div>
         <div @class(['font-bold text-blue-500' => $currentStep == 3])>Step 3</div>
@@ -13,23 +13,23 @@
     <!-- Step 1 -->
     @if($currentStep == 1)
     <div>
-        <h3 class="text-lg font-semibold mb-4">Step 1: Product Information</h3>
+        <h3 class="text-lg font-semibold mb-4 text-black">Step 1: Product Information</h3>
 
         <div class="mb-4">
-            <label class="block text-sm font-medium">Product Name:</label>
-            <input type="text" wire:model="name" class="w-full p-2 border border-gray-300 rounded-md">
+            <label class="block text-sm font-medium text-black">Product Name:</label>
+            <input type="text" wire:model="name" class="w-full p-2 border border-gray-300 rounded-md text-black">
             <x-input-error :messages="$errors->get('name')" />
         </div>
 
         <div class="mb-4">
-            <label class="block text-sm font-medium">Product Amount:</label>
-            <input type="text" wire:model="amount" class="w-full p-2 border border-gray-300 rounded-md">
+            <label class="block text-sm font-medium text-black">Product Amount:</label>
+            <input type="text" wire:model="amount" class="w-full p-2 border border-gray-300 rounded-md text-black">
             <x-input-error :messages="$errors->get('amount')" />
         </div>
 
         <div class="mb-4">
-            <label class="block text-sm font-medium">Product Description:</label>
-            <textarea wire:model="description" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
+            <label class="block text-sm font-medium text-black">Product Description:</label>
+            <textarea wire:model="description" class="w-full p-2 border border-gray-300 rounded-md text-black"></textarea>
             <x-input-error :messages="$errors->get('description')" />
         </div>
 
@@ -43,15 +43,15 @@
     <!-- Step 2 -->
     @if($currentStep == 2)
     <div>
-        <h3 class="text-lg font-semibold mb-4">Step 2: Product Status</h3>
+        <h3 class="text-lg font-semibold mb-4 text-black">Step 2: Product Status</h3>
 
         <div class="mb-4">
-            <label class="block text-sm font-medium">Product Status:</label>
+            <label class="block text-sm font-medium text-black">Product Status:</label>
             <div class="flex items-center gap-4">
-                <label class="flex items-center gap-2">
+                <label class="flex items-center gap-2 text-black">
                     <input type="radio" wire:model="status" value="1" @checked($status == '1')> Active
                 </label>
-                <label class="flex items-center gap-2">
+                <label class="flex items-center gap-2 text-black">
                     <input type="radio" wire:model="status" value="0" @checked($status == '0')> DeActive
                 </label>
             </div>
@@ -59,8 +59,8 @@
         </div>
 
         <div class="mb-4">
-            <label class="block text-sm font-medium">Product Stock:</label>
-            <input type="text" wire:model="stock" class="w-full p-2 border border-gray-300 rounded-md">
+            <label class="block text-sm font-medium text-black">Product Stock:</label>
+            <input type="text" wire:model="stock" class="w-full p-2 border border-gray-300 rounded-md text-black">
             <x-input-error :messages="$errors->get('stock')" />
         </div>
 
@@ -80,29 +80,29 @@
     <!-- Step 3 -->
     @if($currentStep == 3)
     <div>
-        <h3 class="text-lg font-semibold mb-4">Step 3: Review Product Details</h3>
+        <h3 class="text-lg font-semibold mb-4 text-black">Step 3: Review Product Details</h3>
 
-        <table class="table-auto w-full border-collapse border border-gray-200 mb-4">
+        <table class="table-auto w-full border-collapse border border-gray-200 mb-4 text-black">
             <tbody>
                 <tr>
-                    <td class="p-2 border">Product Name:</td>
-                    <td class="p-2 border font-semibold">{{ $name }}</td>
+                    <td class="p-2 border text-black">Product Name:</td>
+                    <td class="p-2 border font-semibold text-black">{{ $name }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 border">Product Amount:</td>
-                    <td class="p-2 border font-semibold">{{ $amount }}</td>
+                    <td class="p-2 border text-black">Product Amount:</td>
+                    <td class="p-2 border font-semibold text-black">{{ $amount }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 border">Product Status:</td>
-                    <td class="p-2 border font-semibold">{{ $status ? 'Active' : 'DeActive' }}</td>
+                    <td class="p-2 border text-black">Product Status:</td>
+                    <td class="p-2 border font-semibold text-black">{{ $status ? 'Active' : 'DeActive' }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 border">Product Description:</td>
-                    <td class="p-2 border font-semibold">{{ $description }}</td>
+                    <td class="p-2 border text-black">Product Description:</td>
+                    <td class="p-2 border font-semibold text-black">{{ $description }}</td>
                 </tr>
                 <tr>
-                    <td class="p-2 border">Product Stock:</td>
-                    <td class="p-2 border font-semibold">{{ $stock }}</td>
+                    <td class="p-2 border text-black">Product Stock:</td>
+                    <td class="p-2 border font-semibold text-black">{{ $stock }}</td>
                 </tr>
             </tbody>
         </table>
