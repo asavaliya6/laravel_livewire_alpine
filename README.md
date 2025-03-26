@@ -54,8 +54,13 @@
 - Build Livewire Component --> app/Http/Livewire/UserProfile.php and Add View --> resources/views/livewire/user-profile.blade.php and Add Route
 - Create Storage Link `php artisan storage:link`
 
- ## Realtime Chat application
+## Realtime Chat application
 
- - Create Model and Migration `php artisan make:model Message -m` `php artisan migrate`
- - Create livewire Component `php artisan make:livewire Chat`
- - Create view and update route and appserviceprovider
+- Create Model and Migration `php artisan make:model Message -m` `php artisan migrate`
+- Create livewire Component `php artisan make:livewire Chat`
+- Create view and update route and appserviceprovider
+
+## Drag and drop with file upload
+
+- Create Livewire Component `php artisan make:livewire FileCreate`
+- Create Migration and Model `php artisan make:migration create_files_table` and `php artisan make:model File` and add route

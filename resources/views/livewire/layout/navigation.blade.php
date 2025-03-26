@@ -48,6 +48,9 @@ new class extends Component
                     <x-nav-link :href="route('comments')" :active="request()->routeIs('comments')">
                         {{ __('Comments') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('files')" :active="request()->routeIs('files')">
+                        {{ __('Files') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -115,6 +118,9 @@ new class extends Component
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('comments')" :active="request()->routeIs('comments')" wire:navigate>
                 {{ __('Comments') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('files')" :active="request()->routeIs('files')" wire:navigate>
+                {{ __('Files') }}
             </x-responsive-nav-link>
         </div>
 

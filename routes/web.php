@@ -13,6 +13,7 @@ use App\Livewire\Comments;
 use App\Livewire\UserProfile;
 use App\Models\User;
 use App\Livewire\Chat;
+use App\Livewire\FileCreate;
 
 
 Route::view('/', 'welcome');
@@ -38,4 +39,6 @@ Route::get('/voting', VotingSystem::class)->name('voting');
 Route::get('/comments', Comments::class)->name('comments');
 Route::get('/profile', UserProfile::class)->name('profile');
 Route::get('/chat/{user}',Chat::class)->name('chat');
+Route::get('/files', FileCreate::class)->name('files');
+
 require __DIR__.'/auth.php';
