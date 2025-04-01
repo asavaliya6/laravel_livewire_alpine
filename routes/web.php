@@ -14,6 +14,7 @@ use App\Livewire\UserProfile;
 use App\Models\User;
 use App\Livewire\Chat;
 use App\Livewire\FileCreate;
+use App\Livewire\MultipleImageUpload;
 
 
 Route::view('/', 'welcome');
@@ -33,12 +34,12 @@ Route::view('profile', 'profile')
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/to-do-list', ToDoList::class)->middleware(['auth'])->name('to-do-list');
-Route::get('/user-search', UserSearch::class)->name('user-search');
 Route::get('/wizard-form', Wizard::class)->name('wizard-form');
 Route::get('/voting', VotingSystem::class)->name('voting');
 Route::get('/comments', Comments::class)->name('comments');
 Route::get('/profile', UserProfile::class)->name('profile');
 Route::get('/chat/{user}',Chat::class)->name('chat');
 Route::get('/files', FileCreate::class)->name('files');
+Route::get('/upload', MultipleImageUpload::class)->name('upload');
 
 require __DIR__.'/auth.php';

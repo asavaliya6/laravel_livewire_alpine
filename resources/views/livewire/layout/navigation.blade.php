@@ -36,9 +36,6 @@ new class extends Component
                     <x-nav-link :href="route('to-do-list')" :active="request()->routeIs('to-do-list')">
                         {{ __('To-Do List') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user-search')" :active="request()->routeIs('user-search')">
-                        {{ __('User Search') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('wizard-form')" :active="request()->routeIs('wizard-form')">
                         {{ __('Wizard Form') }}
                     </x-nav-link>
@@ -47,6 +44,9 @@ new class extends Component
                     </x-nav-link>
                     <x-nav-link :href="route('comments')" :active="request()->routeIs('comments')">
                         {{ __('Comments') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('upload')" :active="request()->routeIs('upload')">
+                        {{ __('Images') }}
                     </x-nav-link>
                     <x-nav-link :href="route('files')" :active="request()->routeIs('files')">
                         {{ __('Files') }}
@@ -107,9 +107,6 @@ new class extends Component
             <x-responsive-nav-link :href="route('to-do-list')" :active="request()->routeIs('to-do-list')" wire:navigate>
                 {{ __('To-Do List') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('user-search')" :active="request()->routeIs('user-search')" wire:navigate>
-                {{ __('User Search') }}
-            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('wizard-form')" :active="request()->routeIs('wizard-form')" wire:navigate>
                 {{ __('Wizard Form') }}
             </x-responsive-nav-link>
@@ -118,6 +115,9 @@ new class extends Component
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('comments')" :active="request()->routeIs('comments')" wire:navigate>
                 {{ __('Comments') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('upload')" :active="request()->routeIs('upload')" wire:navigate>
+                {{ __('Images') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('files')" :active="request()->routeIs('files')" wire:navigate>
                 {{ __('Files') }}
