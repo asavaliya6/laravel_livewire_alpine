@@ -15,7 +15,7 @@ class UserProfile extends Component
 
     public function mount()
     {
-        $user = Auth::user(); // Fetch authenticated user
+        $user = Auth::user(); 
         $profile = Profile::where('email', $user->email)->first();
 
         $this->name = $user->name;
@@ -30,7 +30,6 @@ class UserProfile extends Component
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
-        // Update the authenticated user's profile
         $profile = Profile::updateOrCreate(
             ['email' => $this->email],
             [
@@ -41,7 +40,6 @@ class UserProfile extends Component
             ]
         );
 
-        // Update the user's name in the 'users' table as well
         Auth::user()->update(['name' => $this->name]);
 
         session()->flash('message', 'Profile updated successfully!');

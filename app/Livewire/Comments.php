@@ -32,7 +32,7 @@ class Comments extends Component
 
         Comment::create(['content' => $this->content]);
         $this->content = '';
-        $this->loadComments(); // Refresh comments immediately
+        $this->loadComments(); 
     }
 
     public function addReply($commentId)
@@ -47,8 +47,8 @@ class Comments extends Component
                 'content' => $this->replyContent[$commentId],
             ]);
 
-            $this->replyContent[$commentId] = ''; // Clear reply content
-            $this->loadComments(); // Refresh comments immediately to show replies
+            $this->replyContent[$commentId] = ''; 
+            $this->loadComments(); 
         }
     }
 

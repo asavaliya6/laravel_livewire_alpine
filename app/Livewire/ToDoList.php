@@ -8,7 +8,7 @@ use App\Models\Task;
 class ToDoList extends Component
 {
     public $title, $description, $taskId;
-    public $statusFilter = 'all';  // New status filter
+    public $statusFilter = 'all';
 
     public function createTask()
     {
@@ -20,7 +20,7 @@ class ToDoList extends Component
         Task::create([
             'title' => $this->title,
             'description' => $this->description,
-            'status' => 'Pending', // Default status for new tasks
+            'status' => 'Pending',
         ]);
 
         session()->flash('message', 'Task created successfully.');

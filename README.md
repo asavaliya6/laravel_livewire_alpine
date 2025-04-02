@@ -22,11 +22,6 @@
 @livewireStyles
 `
 
-## Real-Time Search
-
-- Create Livewire Component `php artisan make:livewire UserSearch`
-- Update Livewire Component Logic --> app/Http/Livewire/UserSearch.php and Create Livewire View --> resources/views/livewire/user-search.blade.php and Add route
-
 ## Livewire Wizard Multi Step Form
 
 - Create Migration and Model `php artisan make:migration create_products_table` `php artisan migrate` `php artisan make:model Product`
@@ -44,7 +39,7 @@
 ## Comments and Reply 
 
 - Create Livewire Component `php artisan make:livewire Comments`
-- Create Migration and Model `php artisan make:migration create_comments_table` `php artisan make:migration create_replies_table` `php artisan migrate` `php artisan make:Model Comment` ``php artisan make:Model Reply`
+- Create Migration and Model `php artisan make:migration create_comments_table` `php artisan make:migration create_replies_table` `php artisan migrate` `php artisan make:Model Comment` `php artisan make:Model Reply`
 - Build Livewire Component --> app/Http/Livewire/Comments.php and Add View --> resources/views/livewire/comments.blade.php and Add Route
 
 ## Upload profile image
